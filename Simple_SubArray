@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] Array = new int[10];
+        System.out.println("Give the numbers");
+        int i, max = Array[0], counter = 0, maxCounter = 0;
+        for (i = 0; i < Array.length; i++) {
+            Array[i] = scanner.nextInt();
+            if (max < Array[i]) {
+                counter++;
+                max = Array[i];
+                if (maxCounter < counter);
+                    maxCounter = counter;
+            } else if (max >= Array[i]) {
+                max = Array[i];
+                if (maxCounter < counter)
+                    maxCounter = counter;
+                counter = 1;
+            }
+        }
+
+            System.out.println("Longest subsequence of increasing numbers length is: " + maxCounter);
+    }
+}
